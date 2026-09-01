@@ -2,6 +2,10 @@
 
 A small React e-commerce assessment app with a static product catalog, cart, and demo checkout flow.
 
+## Live demo
+
+[Open the deployed Shoply app](https://shoplyy.pages.dev/)
+
 ## Run locally
 
 ```bash

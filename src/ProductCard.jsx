@@ -7,7 +7,8 @@ const currency = new Intl.NumberFormat('en-US', {
 });
 
 export default function ProductCard({ product }) {
-  const { addToCart } = useCart();
+  const { addToCart, cart } = useCart();
+  const isInCart = cart.some((item) => item.id === product.id);
 
   return (
     <article className="product-card">
@@ -23,8 +24,11 @@ export default function ProductCard({ product }) {
           type="button"
           onClick={() => addToCart(product)}
         >
-          Add to cart
+          {isInCart ? 'Add another' : 'Add to cart'}
         </button>
+        <p className="cart-feedback" aria-live="polite">
+          {isInCart ? 'In your cart' : ''}
+        </p>
       </div>
     </article>
   );
