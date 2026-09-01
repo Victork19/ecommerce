@@ -193,6 +193,11 @@ input {
   background: #2747b4;
 }
 
+.primary-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
 .secondary-button {
   max-width: 220px;
   color: #3157d5;
@@ -220,6 +225,255 @@ input {
   margin: 0 0 1.5rem;
   color: #687386;
   line-height: 1.7;
+}
+
+.cart-layout,
+.checkout-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.75fr);
+  align-items: start;
+  gap: 1.5rem;
+}
+
+.cart-items {
+  display: grid;
+  gap: 1rem;
+}
+
+.cart-item,
+.order-summary,
+.checkout-form,
+.empty-state,
+.confirmation-card {
+  border: 1px solid #e0e6ef;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 0.75rem 2rem rgb(34 49 86 / 5%);
+}
+
+.cart-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.cart-item-image {
+  width: 112px;
+  height: 112px;
+  flex: 0 0 112px;
+  border-radius: 0.7rem;
+  object-fit: cover;
+  background: #e9eefb;
+}
+
+.cart-item-details {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cart-item-heading,
+.cart-item-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cart-item-heading h2,
+.cart-item-heading p {
+  margin: 0;
+}
+
+.cart-item-heading h2 {
+  font-size: 1rem;
+}
+
+.cart-item-heading p {
+  margin-top: 0.3rem;
+  color: #687386;
+  font-size: 0.85rem;
+}
+
+.cart-item-heading strong {
+  color: #3157d5;
+  white-space: nowrap;
+}
+
+.quantity-control {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #dbe1ea;
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
+
+.quantity-control button {
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  color: #3157d5;
+  background: #f5f7fb;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.quantity-control span {
+  min-width: 2rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.remove-button {
+  padding: 0;
+  border: 0;
+  color: #bd4658;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.order-summary,
+.checkout-form,
+.empty-state,
+.confirmation-card {
+  padding: 1.5rem;
+}
+
+.order-summary {
+  position: sticky;
+  top: 1rem;
+}
+
+.order-summary h2,
+.checkout-form h2 {
+  margin: 0 0 1.25rem;
+  font-size: 1.2rem;
+}
+
+.order-summary dl {
+  margin: 0 0 1.25rem;
+}
+
+.order-summary dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.65rem 0;
+  color: #687386;
+}
+
+.order-summary dt,
+.order-summary dd {
+  margin: 0;
+}
+
+.order-summary dd {
+  color: #17202a;
+  font-weight: 700;
+}
+
+.order-summary .summary-total {
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e6ef;
+  color: #17202a;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.empty-state,
+.confirmation-card {
+  max-width: 680px;
+  margin: 2rem auto;
+}
+
+.empty-state h1,
+.confirmation-card h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: -0.06em;
+}
+
+.empty-state p:not(.eyebrow),
+.confirmation-card p:not(.eyebrow) {
+  margin: 0 0 1.5rem;
+  color: #687386;
+  line-height: 1.6;
+}
+
+.compact-button {
+  max-width: 220px;
+}
+
+.checkout-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.checkout-form label {
+  display: grid;
+  gap: 0.4rem;
+  color: #344054;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.checkout-form input {
+  width: 100%;
+  padding: 0.75rem 0.8rem;
+  border: 1px solid #cfd7e4;
+  border-radius: 0.6rem;
+  color: #17202a;
+  background: #fff;
+}
+
+.checkout-form input:focus,
+button:focus-visible {
+  outline: 3px solid rgb(49 87 213 / 25%);
+  outline-offset: 2px;
+}
+
+.checkout-form input:focus {
+  border-color: #3157d5;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.confirmation-card {
+  text-align: center;
+}
+
+.confirmation-card .eyebrow {
+  margin-top: 1rem;
+}
+
+.confirmation-card strong {
+  display: block;
+  margin-bottom: 1.5rem;
+  color: #3157d5;
+  font-size: 1.15rem;
+}
+
+.confirmation-icon {
+  display: grid;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: #3157d5;
+  font-size: 1.8rem;
+  font-weight: 800;
 }
 
 .eyebrow {
@@ -262,6 +516,32 @@ input {
 
   .product-grid {
     grid-template-columns: 1fr;
+  }
+
+  .cart-layout,
+  .checkout-layout,
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-item {
+    align-items: flex-start;
+  }
+
+  .cart-item-image {
+    width: 80px;
+    height: 80px;
+    flex-basis: 80px;
+  }
+
+  .cart-item-heading,
+  .cart-item-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .order-summary {
+    position: static;
   }
 }
 
