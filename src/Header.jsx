@@ -1,3 +1,4 @@
+import React from 'react';
 import { useCart } from '../context/CartContext';
 
 export default function Header({ activePage, onNavigate }) {

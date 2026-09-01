@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Header from './src/Header';
 import CartPage from './pages/CartPage';
 import CheckoutPage from './pages/CheckoutPage';

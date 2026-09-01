@@ -1,3 +1,4 @@
+import React from 'react';
 import { useCart } from '../context/CartContext';
 
 const currency = new Intl.NumberFormat('en-US', {

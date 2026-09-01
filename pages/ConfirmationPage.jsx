@@ -1,3 +1,5 @@
+import React from 'react';
+
 const currency = new Intl.NumberFormat('en-US', {
   style: 'currency',
   currency: 'USD',

@@ -1,3 +1,4 @@
+import React from 'react';
 import { products } from '../data/products';
 import ProductList from '../src/ProductList';
 

@@ -1,3 +1,4 @@
+import React from 'react';
 import { useCart } from '../context/CartContext';
 import CartItem from '../src/CartItem';
 import OrderSummary from '../src/OrderSummary';
